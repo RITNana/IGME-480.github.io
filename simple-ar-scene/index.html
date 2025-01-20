@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://aframe.io/releaeses/1.6.0/afrane.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple AR Scene</title>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+    <!--Intialize AR-->
+    <a-scene embedded arjs vr-mode-ui="enabled: false">
+        <!---Marker-->
+        <a-marker preset="hiro"> <!--Default "hiro" marker for tracing-->
+            <!--3D object (blue box) added to marker-->
+            <a-box position="0 0.5 0" color="blue"></a-box>
+        </a-marker>
+        <a-entity camera></a-entity> <!--required for AR.js to handle user's device camera-->
+    </a-scene>
+</body>
+
+</html>
