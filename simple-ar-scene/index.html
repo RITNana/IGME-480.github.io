@@ -23,16 +23,16 @@
     <a-scene vr-mode-ui="enabled: false" arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
         <!---Marker-->
         <!--3D object (yellow box) added to marker-->
-        <!-- <a-box material="color: yellow" gps-new-entity-place="latitude: 43; longitude: -65" /> -->
-        <a-entity
+        <a-box material="color: yellow" gps-new-entity-place="latitude: -43; longitude: -105" />
+        <!-- <a-entity
           position="0 0 0"
           scale="0.05 0.05 0.05"
           rotation="0 45 0"
           gltf-model="scene/scene.gltf"
           gps-new-enmtity-place="latitude: 43; longitude: -65";>
-        </a-entity>
+        </a-entity> -->
         <!-- </a-marker> -->
-        <a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 5'> </a-camera> <!--required for AR.js loc-base webcam-->
+        <a-camera gps-new-camera='gpsMinDistance: 5'> </a-camera> <!--required for AR.js loc-base webcam-->
     </a-scene>
 </body>
 
