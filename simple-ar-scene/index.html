@@ -13,7 +13,12 @@
         <!---Marker-->
         <a-marker preset="hiro"> <!--Default "hiro" marker for tracing-->
             <!--3D object (blue box) added to marker-->
-            <a-sphere position="0 0.5 0" radius="0.5" color="red"></a-box>
+            <a-entity
+            position="0 0 0"
+            scale="0.05 0.05 0.05"
+            rotation="0 45 0"
+            gltf-model="scene/scene.gltf"
+          ></a-entity>
         </a-marker>
         <a-entity camera></a-entity> <!--required for AR.js to handle user's device camera-->
     </a-scene>
