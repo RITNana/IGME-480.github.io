@@ -18,8 +18,6 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-      <!-- Camera with GPS Location -->
-      <a-camera gps-new-camera></a-camera>
 
       <!-- GLTF Model at Specific Latitude and Longitude -->
       <!-- <a-entity
@@ -27,7 +25,10 @@
         gltf-model="https://people.rit.edu/ns8363/IGME-480.github.io/minor_project_iii/Duck.gltf"
         scale="5 5 5"
       ></a-entity> -->
-      <a-box color="tomato" depth="2" height="4" width="0.5"></a-box>
+      <a-box material="color: tomato" gps-new-entity-place="latitude: 43.08471; longitude: -77.67216" scale = "3 3 3"/>
+
+       <!-- Camera with GPS Location -->
+       <a-camera gps-new-camera></a-camera>
     </a-scene>
   </body>
 </html>
