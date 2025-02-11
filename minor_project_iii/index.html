@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <!-- Load a 3D model based on Location -->
+    <!-- Load a 3D model at specific GPS location -->
   <head>
     <title>AR.js with GLTF Model</title>
     <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
-    
     <script src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar.js'></script>
-
-     <!-- Pure three.js code that the A-Frame components use for location-based AR -->
-     <script type='text/javascript'
-     src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/three.js/build/ar-threex-location-only.js'></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
     <!-- A-Frame Scene -->
     <a-scene
       vr-mode-ui="enabled: false;"
       embedded
-      arjs="sourceType: gps-new-camera; videoTexture: true; debugUIEnabled: false;"
+      arjs="sourceType: gps-camera; debugUIEnabled: false;"
     >
+      <!-- Camera with GPS Location -->
+      <a-camera gps-camera rotation-reader></a-camera>
 
       <!-- GLTF Model at Specific Latitude and Longitude -->
       <a-entity
-        gps-new-entity-place="latitude: 43.06375; longitude -77.69108"
+        gps-entity-place="latitude: 43.092236; longitude: 77.363758"
         gltf-model="https://people.rit.edu/ns8363/IGME-480.github.io/minor_project_iii/Duck.gltf"
-        scale="100 100 100"
+        scale="5 5 5"
       ></a-entity>
-
-       <!-- Camera with GPS Location -->
-       <a-camera gps-new-camera> </a-camera>
     </a-scene>
   </body>
 </html>
