@@ -8,7 +8,12 @@
 <body>
 <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
     <a-camera gps-new-camera></a-camera>
-    <a-box color="red" gps-new-entity-place="latitude: 43.06378; longitude: -77.69107" depth="10" height="10" width="10" scale="1 1 1"></a-box>
+    <a-entity 
+    gps-new-entity-place="latitude: 43.06378; longitude: -77.69107" 
+    gltf-model = "https://people.rit.edu/ns8363/IGME-480.github.io/minor_project_iii/Duck.gltf"
+    scale="1 1 1">
+
+    </a-entity>
 </a-scene>
 </body>
 </html>
