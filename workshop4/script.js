@@ -10,9 +10,9 @@ const loadPlaces = () => {
 
     places.forEach(place => {
         const entity = document.createElement("a-entity");
-        const sphere = document.createElement("a-sphere")
+        const shape = document.createElement("a-sphere")
 
-        sphere.setAttribute( "primitive: sphere; radius: 1", "color: blue");
+        shape.setAttribute( "color", "blue");
         entity.setAttribute("gps-entity-place", `latitude: ${place.latitude}; longitude: ${place.longitude}`);
      
 
