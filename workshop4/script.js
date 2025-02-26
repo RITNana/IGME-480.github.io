@@ -3,7 +3,7 @@ const places = [
     { name: "Rochester Abandoned Subway", latitude: 43.154722, longitude: -77.609722 },
     { name: "Washington Square Park", latitude: 43.1534, longitude: -77.6053 },
     { name: "Rochester Contemporary Art Center", latitude: 43.156619, longitude: -77.600730 },
-    {name: "RIT Wallace Library", latitude: 43.08399782264377, longitude: -77.6763344018819}
+   
 ];
 
 const loadPlaces = () => {
