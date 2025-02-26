@@ -33,7 +33,7 @@
 const fetchPlacesFromOSM = async (latitude, longitude) => {
     // For testing puroposes, you may need to increase the radius and/or change the API query
     // For example, you can try "amenity"="cafe"
-    const radius = 2000; // radius in meters
+    const radius = 1400// radius in meters
     const query = `
         [out:json];
         node["amenity"="cafe"](around:${radius},${latitude},${longitude});
