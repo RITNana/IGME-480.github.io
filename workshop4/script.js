@@ -1,8 +1,9 @@
 // For testing puroposes, you may need to change these places to something closer to you
 const places = [
-    { name: "Wallace Library", latitude: 43.08408742372535, longitude: -77.67634373265665 },
-    { name: "The Hill at Rochester", latitude: 43.1534, longitude: -77.6053 },
-    { name: "The Student Alumni Union", latitude: 43.156619, longitude: -77.600730 }
+    { name: "Rochester Abandoned Subway", latitude: 43.154722, longitude: -77.609722 },
+    { name: "Washington Square Park", latitude: 43.1534, longitude: -77.6053 },
+    { name: "Rochester Contemporary Art Center", latitude: 43.156619, longitude: -77.600730 },
+    {name: "RIT Wallace Library", latitude: 43.08399782264377, longitude: -77.6763344018819}
 ];
 
 const loadPlaces = () => {
@@ -10,11 +11,10 @@ const loadPlaces = () => {
 
     places.forEach(place => {
         const entity = document.createElement("a-entity");
-        const shape = document.createElement("a-sphere")
 
-        shape.setAttribute("color", "blue");
         entity.setAttribute("gps-entity-place", `latitude: ${place.latitude}; longitude: ${place.longitude}`);
-     
+        entity.setAttribute("geometry", "primitive: sphere; radius: 1");
+        entity.setAttribute("material", "color: blue");
 
         const text = document.createElement("a-text");
         text.setAttribute("value", place.name);
@@ -24,8 +24,7 @@ const loadPlaces = () => {
 
         entity.addEventListener("click", () => alert(`You clicked on: ${place.name}`));
 
-       // scene.appendChild(entity);
-        scene.appendChild(shape)
+        scene.appendChild(entity);
     });
 };
 
