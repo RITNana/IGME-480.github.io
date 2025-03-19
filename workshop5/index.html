@@ -7,6 +7,13 @@
   <title>Simple AR Scene</title>
 </head>
 
+<script>
+  document.querySelector('.clickable').addEventListener('click', function () {
+    alert('Box clicked!');
+  });
+
+</script>
+
 <body style="margin: 0; overflow: hidden;">
   <a-scene embedded arjs>
     <!-- Define the camera with a cursor that uses the entity as the ray's origin -->
@@ -26,11 +33,6 @@
   </a-scene>
 </body>
 
-<script>
-  document.querySelector('.clickable').addEventListener('click', function () {
-    alert('Box clicked!');
-  });
 
-</script>
 
 </html>
